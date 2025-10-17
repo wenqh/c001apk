@@ -3,7 +3,7 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
-        maven("https://artifactory.appodeal.com/appodeal-public/")
+        maven("https://jitpack.io")
     }
 }
 dependencyResolutionManagement {
