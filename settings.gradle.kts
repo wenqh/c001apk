@@ -3,7 +3,6 @@ pluginManagement {
         google()
         mavenCentral()
         gradlePluginPortal()
-        maven("https://jitpack.io")
     }
 }
 dependencyResolutionManagement {
@@ -13,6 +12,8 @@ dependencyResolutionManagement {
         mavenCentral()
         maven ("https://jitpack.io")
         maven("https://oss.sonatype.org/content/repositories/public")
+        maven("https://artifactory.appodeal.com/appodeal-public/")
+
         gradlePluginPortal()
     }
 }
