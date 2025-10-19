@@ -151,4 +151,35 @@
         app:layout_constraintTop_toBottomOf="@id/captchaLayout" />
 
 
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/_cookieLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toEndOf="@id/accountLayout"
+        app:layout_constraintStart_toStartOf="@id/accountLayout"
+        app:layout_constraintTop_toBottomOf="@id/login">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/_cookie"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="uid;user;token"
+            android:singleLine="true" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/_setSession"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="设置session"
+        app:layout_constraintEnd_toEndOf="@id/_cookieLayout"
+        app:layout_constraintStart_toStartOf="@id/_cookieLayout"
+        app:layout_constraintTop_toBottomOf="@id/_cookieLayout" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

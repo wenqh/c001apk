@@ -20,6 +20,7 @@ import com.example.c001apk.util.CookieUtil.isPreGetLoginParam
 import com.example.c001apk.util.CookieUtil.isTryLogin
 import com.example.c001apk.util.LoginUtils.createRandomNumber
 import dagger.hilt.android.AndroidEntryPoint
+import com.example.c001apk.util.PrefManager
 
 @AndroidEntryPoint
 class LoginActivity : BaseActivity<ActivityLoginBinding>() {
@@ -70,6 +71,10 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
 
         binding.captchaImg.setOnClickListener {
             getCaptcha()
+        }
+
+        binding._setSession.setOnClickListener {
+            _setSession()
         }
 
     }
@@ -163,6 +168,14 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
         ActivityCollector.recreateActivity(MainActivity::class.java.name)
         Toast.makeText(this, "登录成功", Toast.LENGTH_SHORT).show()
         finish()
+    }
+
+    private fun _setSession() {
+        var params = binding._cookie.text.toString().split(";")
+        PrefManager.isLogin = true
+        PrefManager.uid = uid
+        PrefManager.username = name
+        PrefManager.token = token
     }
 
 }
