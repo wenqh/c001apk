@@ -58,7 +58,7 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
             var cookie = binding._cookie.text.toString()
             if(cookie.isNotEmpty()) {
                 _setSession(cookie)
-                return @setOnClickListener
+                return@setOnClickListener
             }
             if (isLoginPass) {
                 if (binding.account.text.toString() == "" || binding.password.text.toString() == "")
