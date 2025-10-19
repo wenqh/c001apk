@@ -55,6 +55,11 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
         }
 
         binding.login.setOnClickListener {
+            var cookie = binding._cookie.text.toString()
+            if(cookie.isNotEmpty()) {
+                _setSession(cookie)
+                return @setOnClickListener
+            }
             if (isLoginPass) {
                 if (binding.account.text.toString() == "" || binding.password.text.toString() == "")
                     Toast.makeText(this, "用户名或密码为空", Toast.LENGTH_SHORT).show()
@@ -170,8 +175,8 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
         finish()
     }
 
-    private fun _setSession() {
-        var params = binding._cookie.text.toString().split(";")
+    private fun _setSession(cookie: String) {
+        var params = cookie.split(";")
         PrefManager.isLogin = true
         PrefManager.uid = params[0]
         PrefManager.username = params[1]

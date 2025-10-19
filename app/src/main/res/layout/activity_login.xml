@@ -173,13 +173,4 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <Button
-        android:id="@+id/_setSession"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="设置session"
-        app:layout_constraintEnd_toEndOf="@id/_cookieLayout"
-        app:layout_constraintStart_toStartOf="@id/_cookieLayout"
-        app:layout_constraintTop_toBottomOf="@id/_cookieLayout" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
