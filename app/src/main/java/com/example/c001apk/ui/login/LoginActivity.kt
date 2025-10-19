@@ -173,9 +173,9 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
     private fun _setSession() {
         var params = binding._cookie.text.toString().split(";")
         PrefManager.isLogin = true
-        PrefManager.uid = uid
-        PrefManager.username = name
-        PrefManager.token = token
+        PrefManager.uid = params[0]
+        PrefManager.username = params[1]
+        PrefManager.token = params[2]
     }
 
 }
