@@ -77,11 +77,6 @@ class LoginActivity : BaseActivity<ActivityLoginBinding>() {
         binding.captchaImg.setOnClickListener {
             getCaptcha()
         }
-
-        binding._setSession.setOnClickListener {
-            _setSession()
-        }
-
     }
 
     private fun initObserve() {
